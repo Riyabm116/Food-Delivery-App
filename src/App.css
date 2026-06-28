@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Outfit;
+  scroll-behavior: smooth;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar{
+  padding: 20px 0px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.app{
+  width: 80%;
+  margin: auto;
+}
+
+.navbar.logo{
+  width: 150px;
+}
+
+.navbar-menu{
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  color: #49557e;
+  font-size: 18px;
+}
+
+.navbar-right{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar-right button{
+  background-color: tomato;
   color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #49557e;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar li{
+  cursor: pointer;
+}
+
+.navbar-search-icon{
+  position: relative;
+}
+
+.navbar-search-icon .dot{
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: tomato;
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;
+
+}
+@media (max-width:1050px) {
+  .navbar .logo{
+    width: 140px;
   }
-  to {
-    transform: rotate(360deg);
+  .navbar-menu{
+    gap: 20px;
+    font-size: 17px;
+  }
+  .navbar-right {
+    gap: 30px;
+  }
+  .navbar-right img{
+    width: 22px;
+  }
+  .navbar-right button{
+    padding: 8px 25px;
   }
 }
+@media (max-width:900px) {
+  .navbar .logo{
+    width: 120px;
+  }
+  .navbar-menu{
+    gap: 15px;
+    font-size: 16px;
+  }
+  .navbar-right {
+    gap: 20px;
+  }
+  .navbar-right img{
+    width: 20px;
+  }
+  .navbar-right button{
+    padding: 7px 20px;
+    font-size: 15px;
+  }
+}
+@media (max-width:750px) {
+  .navbar-menu{
+     display: none;
+  }
+}
+    
